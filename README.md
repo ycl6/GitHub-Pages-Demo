@@ -28,7 +28,7 @@ We can initialise the **Pages** feature by selecting a theme. Click on the **Sel
 
 ![Select theme](https://user-images.githubusercontent.com/9032946/93335330-2e6faf00-f81e-11ea-9edb-36d158d0cec1.png)
 
-You will be redirected to the `index.md` file creating page. Click **Cancel** to accept the deault content.
+You will be redirected to the `index.md` file creating page. Click **Cancel** to accept the default content.
 
 ![Create index.md](https://user-images.githubusercontent.com/9032946/93336776-20229280-f820-11ea-877b-c3ac0b34e3f4.png)
 
@@ -52,7 +52,7 @@ By default, GitHub will render the `index.md` file and show it as a web page. We
 
 ## Cloning a repository
 
-In most cases, you will be working on a project or software on a local machine, and only push commits to the remote repository when you are ready to share it online. So we will **clone** the repository from GitHub to the local machine. We will ontain a full copy of the data and the commit histories of every file and folder that the GitHub repository has at that point in time. We will obtain the the remote URL provided on the GitHub repository page.
+In most cases, you will be working on a project or software on a local machine, and only push commits to the remote repository when you are ready to share it online. So, we will **clone** the repository from GitHub to the local machine. By doing so, we will obtain a full copy of the data and the commit histories of every file and folder that the GitHub repository has at that point in time. We can obtain the remote URL provided on the GitHub repository page by clicking on the **Code** button.
 
 In this tutorial we will use the follow local directory structure:
 
@@ -101,7 +101,7 @@ remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (7/7), done.
 ```
 
-By defauly `git clone` will download the contents in the **master** branch. You can check which branch you are currently in with `git branch`.
+By default, `git clone` will download the contents in the **master** branch. You can check which branch you are currently in with `git branch`.
 
 ```S
 $ cd /mnt/github/R-Test-Repo
@@ -112,7 +112,7 @@ $ git branch
 
 ## Checkout a remote branch
 
-We can retreive the **gh-pages** branch with `git checkout`.
+We can retrieve the **gh-pages** branch with `git checkout`.
 
 ```S
 $ git checkout -b gh-pages origin/gh-pages
@@ -132,9 +132,9 @@ $ git branch
 
 ## Download `mtcars.Rmd`
 
-We can now start to use `git` as a version-control system to track and monitor changes. For example, we have a project named `mtcars` that we are working on and we would like to track the changes, and also share the file and the rendered HTML document on GitHub.
+We can now start to use `git` as a version-control system to track and monitor changes. For example, we have a project named `mtcars` that we are working on and we would like to track the changes, and share the file and the rendered HTML document on GitHub.
 
-You can create your files inside the `R-Test-Repo` directory on your local machine that is tracked by `git`. For the simplicity of this demonstration, we will download the  "mtcars.Rmd" file from [here](https://raw.githubusercontent.com/ycl6/GitHub-Pages-Demo/master/mtcars.Rmd).
+You can create your files inside the `R-Test-Repo` directory on your local machine that is tracked by `git`. For the simplicity of this demonstration, we will download the "mtcars.Rmd" file from [here](https://raw.githubusercontent.com/ycl6/GitHub-Pages-Demo/master/mtcars.Rmd).
 
 ```S
 $ cd /mnt/project/mtcars
@@ -171,7 +171,7 @@ $ git branch
 * master
 ```
 
-If you are in another branch, e.g.the **gh-pages** branch, you can switch to the **master** branch with `git checkout`.
+If you are in another branch, e.g. the **gh-pages** branch, you can switch to the **master** branch with `git checkout`.
 
 ```S
 $ git checkout master
