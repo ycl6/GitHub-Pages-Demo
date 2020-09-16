@@ -218,3 +218,12 @@ Use the URL provided in **:gear:Settings** that you saw earlier and go to your s
 If the site content was not updated, you can do a *force refresh* by pressing both control and F5 to get the latest version of the site.
 
 ![New site](https://user-images.githubusercontent.com/9032946/93347546-1e130080-f82d-11ea-9724-4be46d58bb59.png)
+
+# Extended Reading
+
+- [Using Git](https://docs.github.com/en/github/using-git): Learn common and advanced workflows in Git to enhance your experience using GitHub.
+- [Creating, cloning, and archiving repositories](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories): Learn about creating, cloning and archiving a GitHub repository.
+- [Writing on GitHub](https://docs.github.com/en/github/writing-on-github): Learn about writing and formatting syntax.
+- [Committing changes to your project](https://docs.github.com/en/github/committing-changes-to-your-project): Learn about commits.
+- [Working with GitHub Pages](https://docs.github.com/en/github/working-with-github-pages)
+- [Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet/) [[PDF](https://training.github.com/downloads/github-git-cheat-sheet.pdf)]
