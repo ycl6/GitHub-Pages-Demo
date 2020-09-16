@@ -60,10 +60,10 @@ In this tutorial we will use the follow local directory structure:
 
 ```
 /mnt
-└── project
-    └── mtcars
-        ├── index.html (your web page)
-        └── mtcars.Rmd (your source code)
+├── project
+│   └── mtcars
+│       ├── index.html (your web page)
+│       └── mtcars.Rmd (your source code)
 └── github
     └── R-Test-Repo
         ├── .git
@@ -76,16 +76,16 @@ In this tutorial we will use the follow local directory structure:
 
 ```
 /mnt
-└── project
-    └── mtcars
-        ├── index.html    
-        └── mtcars.Rmd
+├── project
+│   └── mtcars
+│       ├── index.html    
+│       └── mtcars.Rmd
 └── github
     └── R-Test-Repo
         ├── _config.yml
         ├── .git
         ├── index.html
-        └── index.md     
+        └── index.md
 ```
 On your local machine, initiate the cloning process with `git clone`.
 
