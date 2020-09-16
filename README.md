@@ -58,7 +58,7 @@ In this tutorial we will use the follow local directory structure:
 
 ### When in master branch
 
-```S
+```
 /mnt
 └── project
     └── mtcars
@@ -74,7 +74,7 @@ In this tutorial we will use the follow local directory structure:
 
 ### When in gh-pages branch
 
-```S
+```
 /mnt
 └── project
     └── mtcars
