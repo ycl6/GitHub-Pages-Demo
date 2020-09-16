@@ -1,0 +1,112 @@
+---
+title: Using R dataset
+description: |
+  A simple example of exploring the mtcars dataset in R.
+output: 
+    html_document:
+        self_contained: true
+        toc: true
+        toc_depth: 3
+        toc_float:
+            collapsed: false
+            smooth_scroll: true
+---
+
+# Explore the `mtcars` dataset
+
+## About the dataset
+
+The `mtcars` data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (197374 models).
+
+> Source: Henderson and Velleman (1981), Building multiple regression models interactively. Biometrics, 37, 391411.
+
+## Load the dataset
+
+Load the `mtcars` dataset.
+
+```{r}
+# Load data
+data(mtcars)
+```
+
+## Explore the dataset
+
+Description of variables:
+
+- mpg: Miles/(US) gallon
+- cyl: Number of cylinders
+- disp: Displacement (cu.in.)
+- hp: Gross horsepower
+- drat: Rear axle ratio
+- wt: Weight (1000 lbs)
+- qsec: 1/4 mile time
+- vs: V/S
+- am: Transmission (0 = automatic, 1 = manual)
+- gear: Number of forward gears
+- carb: Number of carburetors
+
+```{r}
+# Print object structure
+str(mtcars)
+
+# Print the first 10 rows
+head(mtcars, 10)
+```
+
+Print observations and variables.
+
+```{r}
+# Number of observations
+nrow(mtcars)
+
+# Number of variables
+ncol(mtcars)
+```
+
+Summaries the dataset.
+
+```{r]
+summary(mtcars)
+```
+
+## Create plots
+
+### Histogram
+
+Create a histogram of gross horsepower (hp).
+
+```{r}
+hist(mtcars$hp, xlab = "Gross horsepower", main = "Histogram of gross horsepower")
+```
+
+### Density plot
+
+Create a density plot of weight.
+
+```{r}
+plot(density(mtcars$wt), xlab = "Weight (1000 lbs)", main = "Density plot of weight")
+```
+
+### Pie chart
+
+Create a pie chart of the type of transmission.
+
+```{r}
+pie(table(mtcars$am), labels = c("automatic", "manual"), main = "Pie chart of transmission")
+```
+
+### Barplot
+
+Create a barplot of number of forward gears.
+
+```{r}
+barplot(table(mtcars$gear), xlab = "Number of forward gears", 
+	main = "Barplot of number of forward gears")
+```
+
+# Session information
+
+```{r}
+sessionInfo()
+```
+
