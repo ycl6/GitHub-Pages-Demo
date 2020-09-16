@@ -10,9 +10,11 @@
 
 In this demo, we will create a GitHub Pages site connected to a repository.
 
+-----
+
 ## Create a new repository on GitHub
 
-First, we will create a **public** repository to enable Pages. You will be able have Pages in private repos if you are a *GitHub Pro* user. You can initialize the repository with a README file and/or license if you wish, or add them later.
+First, we will create a **public** repository to enable Pages. You will be able have Pages in private repositories if you are a *GitHub Pro* user. You can initialize the repository with a README file and/or license if you wish, or add them later.
 
 ![Create repository](https://user-images.githubusercontent.com/9032946/93335108-dfc21500-f81d-11ea-886b-c72d6c26f474.png)
 
@@ -45,3 +47,83 @@ From now on, you will be able to use the **gh-pages** branch to host web content
 By default, GitHub will render the `index.md` file and show it as a web page. We can replace it with a `index.html`, or edit `index.md` to show the content we want.
 
 ![Default site](https://user-images.githubusercontent.com/9032946/93337866-9b387880-f821-11ea-9516-a9250a00daef.png)
+
+-----
+
+## Cloning a repository
+
+In most cases, you will be working on a project or software on a local machine, and only push commits to the remote repository when you are ready to share it online. So we will **clone** the repository from GitHub to the local machine. We will ontain a full copy of the data and the commit histories of every file and folder that the GitHub repository has at that point in time. We will obtain the the remote URL provided on the GitHub repository page.
+
+In this tutorial we will use the follow local directory structure:
+
+### When in master branch
+
+```S
+/mnt
+└── project
+    └── mtcars
+        ├── index.html (your web page)
+        └── mtcars.Rmd (your source code)
+└── github
+    └── R-Test-Repo
+        ├── .git
+        ├── LICENSE
+        ├── mtcars.Rmd
+        └── README.md     
+```
+
+### When in gh-pages branch
+
+```S
+/mnt
+└── project
+    └── mtcars
+        ├── index.html    
+        └── mtcars.Rmd
+└── github
+    └── R-Test-Repo
+        ├── _config.yml
+        ├── .git
+        ├── index.html
+        └── index.md     
+```
+On your local machine, initiate the cloning process with `git clone`.
+
+```S
+$ cd /mnt/github
+$ git clone https://github.com/USERNAME/R-Test-Repo.git
+
+Cloning into 'R-Test-Repo'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+```
+
+By defauly `git clone` will download the contents in the **master** branch. You can check which branch you are currently in with `git branch`.
+
+```S
+$ cd /mnt/github/R-Test-Repo
+$ git branch
+
+* master
+```
+
+## Checkout a remote branch
+
+We can retreive the **gh-pages** branch with `git checkout`.
+
+```S
+$ git checkout -b gh-pages origin/gh-pages
+
+Branch 'gh-pages' set up to track remote branch 'gh-pages' from 'origin'.
+Switched to a new branch 'gh-pages'
+```
+
+```S
+$ git branch
+
+* gh-pages
+  master
+```
