@@ -127,3 +127,94 @@ $ git branch
 * gh-pages
   master
 ```
+
+-----
+
+## Download `mtcars.Rmd`
+
+We can now start to use `git` as a version-control system to track and monitor changes. For example, we have a project named `mtcars` that we are working on and we would like to track the changes, and also share the file and the rendered HTML document on GitHub.
+
+You can create your files inside the `R-Test-Repo` directory on your local machine that is tracked by `git`. For the simplicity of this demonstration, we will download the  "mtcars.Rmd" file from [here](https://raw.githubusercontent.com/ycl6/GitHub-Pages-Demo/master/mtcars.Rmd).
+
+```S
+$ cd /mnt/project/mtcars
+$ wget https://raw.githubusercontent.com/ycl6/GitHub-Pages-Demo/master/mtcars.Rmd
+```
+
+## Convert Rmd to HTML
+
+We use the `render` function in the `rmarkdown` package to generate the HTML document of this R Markdown file.
+
+We create the HTML document with the name `index.html` because a file with this name will be used as the default page shown on a website, i.e. the homepage of the website.
+
+```S
+$ R -e "rmarkdown::render('mtcars.Rmd', output_file = 'index.html')"
+
+R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-conda_cos6-linux-gnu (64-bit)
+...
+...
+...
+Output created: index.html
+```
+
+## Add source code to master branch
+
+Go to the local repository, and check which branch you are in now.
+
+```S
+$ cd /mnt/github/R-Test-Repo
+$ git branch
+
+  gh-pages
+* master
+```
+
+If you are in another branch, e.g.the **gh-pages** branch, you can switch to the **master** branch with `git checkout`.
+
+```S
+$ git checkout master
+$ git branch
+
+  gh-pages
+* master
+```
+
+Copy the `mtcars.Rmd` to current directory, use `git` commands to push it to GitHub.
+
+```S
+$ cp /mnt/project/mtcars/mtcars.Rmd .
+
+$ git add .
+$ git commit -m "Initial commit"
+$ git push origin master 
+```
+
+## Add HTML to gh-pages branch
+
+Use `git checkout` to switch to the **gh-pages** branch and copy the `index.html` to current directory.
+
+```S
+$ git checkout gh-pages
+$ git branch
+
+* gh-pages
+  master
+```
+
+```S
+$ cp /mnt/project/mtcars/index.html .
+
+$ git add .
+$ git commit -m "Initial commit"
+$ git push origin gh-pages 
+```
+
+## View site on browser
+
+Use the URL provided in **:gear:Settings** that you saw earlier and go to your site on your browser.
+
+If the site content was not updated, you can do a *force refresh* by pressing both control and F5 to get the latest version of the site.
+
+![New site](https://user-images.githubusercontent.com/9032946/93347546-1e130080-f82d-11ea-9724-4be46d58bb59.png)
