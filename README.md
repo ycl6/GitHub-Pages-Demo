@@ -219,6 +219,18 @@ If the site content was not updated, you can do a *force refresh* by pressing bo
 
 ![New site](https://user-images.githubusercontent.com/9032946/93347546-1e130080-f82d-11ea-9724-4be46d58bb59.png)
 
+-----
+
+# Choosing publishing sources
+
+There are 3 publishing sources you can choose for a GitHub repository:
+
+1. in the **master** branch
+2. in the `docs` folder of the **master** branch (make sure the `docs` folder already exists in your repository)
+3. in the **gh-pages** branch
+
+In this demo, we are using the **gh-pages** branch to publish the website. You can use other sources if you find them more appropriate. For example, I am publishing the web version of this `GitHub-Pages-Demo` repository using the **master** branch, and GitHub renders this `README.md` file and show it as a [web page](https://ycl6.github.io/GitHub-Pages-Demo/).
+
 # Extended Reading
 
 - [Using Git](https://docs.github.com/en/github/using-git): Learn common and advanced workflows in Git to enhance your experience using GitHub.
