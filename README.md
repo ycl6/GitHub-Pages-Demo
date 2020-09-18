@@ -56,7 +56,7 @@ In most cases, you will be working on a project or software on a local machine, 
 
 In this tutorial we will use the follow local directory structure:
 
-### When in master branch
+### When in the master branch
 
 ```
 /mnt
@@ -72,7 +72,7 @@ In this tutorial we will use the follow local directory structure:
         └── README.md     
 ```
 
-### When in gh-pages branch
+### When in the gh-pages branch
 
 ```
 /mnt
@@ -112,7 +112,9 @@ $ git branch
 
 ## :bulb: Checkout a remote branch
 
-We can retrieve the **gh-pages** branch with `git checkout`.
+We can download the remote **gh-pages** branch and add it to our local repository with `git checkout`. 
+
+> **Note:** The same `git checkout` command can be use to retrieve any remote branch that exist in the remote repository.
 
 ```S
 $ git checkout -b gh-pages origin/gh-pages
