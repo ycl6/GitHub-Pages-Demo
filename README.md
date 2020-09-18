@@ -10,6 +10,13 @@
 
 In this demo, we will create a GitHub Pages site connected to a repository.
 
+# Prerequisite
+
+- Git supported local environment
+- Unix system - We will be using `wget` to retrieve a demo R Markdown file. You can download the file with other means if using other OS.
+- R environment
+- R [rmarkdown](https://cran.r-project.org/package=rmarkdown) package - we will use the `render` function to generate a HTML document from a R Markdown file.
+
 -----
 
 ## :bulb: Create a new repository on GitHub
@@ -145,7 +152,7 @@ $ wget https://raw.githubusercontent.com/ycl6/GitHub-Pages-Demo/master/mtcars.Rm
 
 ## :bulb: Convert Rmd to HTML
 
-We use the `render` function in the `rmarkdown` package to generate the HTML document of this R Markdown file.
+Next, we use the `render` function in the `rmarkdown` package to generate the HTML document of the R Markdown file that we have just downloaded.
 
 We create the HTML document with the name `index.html` because a file with this name will be used as the default page shown on a website, i.e. the homepage of the website.
 
